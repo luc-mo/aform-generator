@@ -6,12 +6,12 @@ export const Form1: FC<Form> = ({ onSubmit }): ReactElement => {
 	return <S.Form1 onSubmit={onSubmit}>
 		<section>
 			<label>Nombre</label>
-			<input type='password'/>
+			<input type='password' required/>
 		</section>
 		<section>
 			<label>Contraseña</label>
-			<input/>
+			<input type='text' required/>
 		</section>
-		<button>Iniciar sesion</button>
+		<button type='submit'>Iniciar sesion</button>
 	</S.Form1>
 }
