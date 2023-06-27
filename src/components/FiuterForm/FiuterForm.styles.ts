@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const FiuterContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-rows: 106px 1fr 170px;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
@@ -10,17 +11,11 @@ export const FiuterContainer = styled.div`
   overflow: hidden;
 `
 
-export const FormContainer = styled.div`
-  position: relative;
-  max-width: 1200px;
-  min-height: 100vh;
-  width: 100%;
-`
-
 export const FiuterNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1200px;
   width: 100%;
   padding: 40px 86px 26px 0;
 `
@@ -29,14 +24,16 @@ export const Logo = styled.img`
   height: 40px;
 `
 
-export const FiuterSection = styled.section`
+export const FiuterMain = styled.main`
   display: flex;
   justify-content: space-between;
+  gap: 170px;
+  width: 100%;
   padding-top: 56px;
 `
 
 export const FiuterForm = styled.form`
-  max-width: 642px;
+  max-width: 600px;
 
   & > button {
     width: 250px;
@@ -141,14 +138,12 @@ export const FiuterBlur = styled.div`
 `
 
 export const FiuterFooter = styled.footer`
-  position: absolute;
   display: grid;
   grid-template-columns: 110px 130px 110px;
   grid-template-rows: 1fr 30px;
   align-items: center;
   justify-content: center;
   gap: 0 80px;
-  bottom: 0;
   width: 100%;
   height: 170px;
   padding-top: 32px;
