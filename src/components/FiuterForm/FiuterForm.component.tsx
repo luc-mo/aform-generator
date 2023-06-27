@@ -7,7 +7,6 @@ export const FiuterForm: FC<Form> = ({ onSubmit }): ReactElement => {
 	const [showSubmitButton, setShowSubmitButton] = useState<boolean>(true)
 
 	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-		event.preventDefault()
 		setShowSubmitButton(false)
 		onSubmit(event)
 	}
