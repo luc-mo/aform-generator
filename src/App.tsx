@@ -6,6 +6,7 @@ import { Form2 } from 'components/Form2'
 import { ScirgaForm } from 'components/ScirgaForm'
 import { CoviForm } from 'components/CoviForm'
 import { ZarzaForm } from 'components/ZarzaForm'
+import { NasitaForm } from 'components/NasitaForm'
 import { NoQuieroMasFormularios } from 'components/NoQuieroMasFormularios'
 
 export const App: FC = (): ReactElement => {
@@ -13,20 +14,25 @@ export const App: FC = (): ReactElement => {
 
   const handleFormCount = useCallback((event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    setFormCount(prev => prev + 1)
+    setFormCount((prev) => prev + 1)
   }, [])
 
   return (
     <>
-      {formCount < 7 ? <>
-        <FiuterForm onSubmit={handleFormCount}/>
-        {formCount > 0 && <Form1 onSubmit={handleFormCount} />}
-        {formCount > 1 && <AitorForm onSubmit={handleFormCount} />}
-        {formCount > 2 && <Form2 onSubmit={handleFormCount}/>}
-        {formCount > 3 && <ScirgaForm onSubmit={handleFormCount}/>}
-        {formCount > 4 && <CoviForm onSubmit={handleFormCount}/>}
-        {formCount > 5 && <ZarzaForm onSubmit={handleFormCount}/>}
-      </> : <NoQuieroMasFormularios/>}
+      {formCount < 8 ? (
+        <>
+          <FiuterForm onSubmit={handleFormCount} />
+          {formCount > 0 && <Form1 onSubmit={handleFormCount} />}
+          {formCount > 1 && <AitorForm onSubmit={handleFormCount} />}
+          {formCount > 2 && <Form2 onSubmit={handleFormCount} />}
+          {formCount > 3 && <ScirgaForm onSubmit={handleFormCount} />}
+          {formCount > 4 && <CoviForm onSubmit={handleFormCount} />}
+          {formCount > 5 && <ZarzaForm onSubmit={handleFormCount} />}
+          {formCount > 6 && <NasitaForm onSubmit={handleFormCount} />}
+        </>
+      ) : (
+        <NoQuieroMasFormularios />
+      )}
     </>
   )
 }
