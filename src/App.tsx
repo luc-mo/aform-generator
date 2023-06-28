@@ -1,8 +1,11 @@
+import { FC, FormEvent, ReactElement, useCallback, useState } from 'react'
 import { AitorForm } from 'components/AitorForm'
 import { FiuterForm } from 'components/FiuterForm'
 import { Form1 } from 'components/Form1'
 import { Form2 } from 'components/Form2'
-import { FC, FormEvent, ReactElement, useCallback, useState } from 'react'
+import { ScirgaForm } from 'components/ScirgaForm'
+import { CoviForm } from 'components/CoviForm'
+import { ZarzaForm } from 'components/ZarzaForm'
 
 export const App: FC = (): ReactElement => {
   const [formCount, setFormCount] = useState<number>(0)
@@ -22,7 +25,10 @@ export const App: FC = (): ReactElement => {
       <FiuterForm onSubmit={handleFormCount}/>
       {formCount > 0 && <Form1 onSubmit={handleFormCount} />}
       {formCount > 1 && <AitorForm onSubmit={handleFormCount} />}
-      {formCount > 2 && <Form2 onSubmit={handleLast}/>}
+      {formCount > 2 && <Form2 onSubmit={handleFormCount}/>}
+      {formCount > 3 && <ScirgaForm onSubmit={handleFormCount}/>}
+      {formCount > 4 && <CoviForm onSubmit={handleFormCount}/>}
+      {formCount > 5 && <ZarzaForm onSubmit={handleLast}/>}
     </>
   )
 }

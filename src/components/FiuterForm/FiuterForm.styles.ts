@@ -34,6 +34,9 @@ export const FiuterMain = styled.main`
 
 export const FiuterForm = styled.form`
   max-width: 600px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 
   & > button {
     width: 250px;
