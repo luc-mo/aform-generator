@@ -10,6 +10,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 24px;
   border-radius: 6px;
+  z-index: 6;
 `
 
 export const FieldSet = styled.fieldset`
