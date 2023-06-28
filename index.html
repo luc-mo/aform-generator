@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html lang='es'>
-  <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>Aform Generator</title>
-    <link rel='icon' type='image/webp' href='assets/afor.webp' />
-    <link rel='preload' href='/fonts/Inter-Regular.ttf' crossorigin='anonymous' as='font' type='font/ttf'>
-    <link rel='preload' href='/fonts/Inter-Bold.ttf' crossorigin='anonymous' as='font' type='font/ttf'>
-    <link rel='stylesheet' href='/main.css' />
-  </head>
-  <body>
-    <div id='root'></div>
-    <script type='module' src='/src/main.tsx'></script>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <form class="form" action="#" target="" method="get" name="formDatosPersonales">
+        <label class="label" for="nombre">Nombre:</label>
+        <input class="input" type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required />
+
+        <label class="label" for="apellidos">Apellidos:</label>
+        <input class="input" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required />
+
+        <label class="label" for="email">Email:</label>
+        <input class="input" type="email" name="email" id="email" placeholder="Email" required />
+
+        <label class="label" for="asunto">Asunto:</label>
+        <input class="input" type="text" name="asunto" id="asunto" placeholder="Título de la consulta" required />
+
+        <label class="label" for="mensaje">Mensaje:</label>
+        <textarea class="text" name="mensaje" for="mensaje" placeholder="Describe brevemente en menos de 300 carácteres"
+            maxlength="300" required></textarea>
+
+        <input class="button" type="submit" name="enviar" value="Enviar datos" />
+    </form>
+</body>
+
 </html>
